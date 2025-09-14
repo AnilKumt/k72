@@ -1,15 +1,52 @@
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import React, { useRef } from "react";
 
 const Agence = () => {
   const imageDivRef = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
 
-  
+  const imageArray = [
+    'https://k72.ca/uploads/teamMembers/ChantalG_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/HugoJoseph_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Olivier_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/Carl_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/CAMILLE_640X960_2-640x960.jpg',
+    'https://k72.ca/uploads/teamMembers/Claire_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/SophieA_480x640-480x640.jpg',
+    'https://k72.ca/uploads/teamMembers/MyleneS_480x640-480x640.jpg'
+  ]
+
+  useGSAP(()=>{
+    gsap.to(imageDivRef.current,{
+      scrollTrigger:{
+        trigger:imageDivRef.current,
+        markers:true,
+        start:'top 30%',
+        end:'top -100%',
+        pin:true,
+        scrub:true,
+        onUpdate:function(elem){
+          let imageIndex;
+          if(elem.progress<1){
+            imageIndex = Math.floor(elem.progress * imageArray.length);
+          }else{
+            imageIndex = imageArray.length - 1;
+          }
+          console.log(imageIndex);
+          const imageTag = imageDivRef.current.querySelector('img');
+          // console.log(imageTag);
+          imageTag.src = imageArray[imageIndex];
+        }
+      }
+    })
+  })
   return (
     <div>
       <div className="section1">
-        <div ref={imageDivRef}className="overflow-hidden h-70 w-55 absolute top-60 left-136 rounded-3xl bg-red-500">
-          <img
+        <div ref={imageDivRef}  className="overflow-hidden h-70 w-55 absolute top-60 left-136 rounded-3xl bg-red-500">
+          <img 
             className="h-full w-full object-cover"
             src="https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg"
           />
