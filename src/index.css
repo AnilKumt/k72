@@ -13,3 +13,8 @@
 body{
   background-color: black;
 }
+
+*::selection {
+  background-color: #D3FD50;
+  color: black;
+}
