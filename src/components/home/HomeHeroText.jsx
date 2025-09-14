@@ -4,7 +4,7 @@ import Video from "./Video";
 const HomeHeroText = () => {
   return (
     <div>
-      <div className="font-[font1] pt-5 text-center">
+      <div className="font-[font1] pt-5 text-center  selection:bg-[#D3FD50] selection:text-black">
         <div className="text-8xl uppercase leading-[8vw] justify-center flex items-center">The Spark for</div>
         <div className="text-8xl uppercase leading-[8vw] flex items-center justify-center">
           all
