@@ -22,7 +22,6 @@ const Agence = () => {
     gsap.to(imageDivRef.current,{
       scrollTrigger:{
         trigger:imageDivRef.current,
-        markers:true,
         start:'top 30%',
         end:'top -100%',
         pin:true,
@@ -34,7 +33,7 @@ const Agence = () => {
           }else{
             imageIndex = imageArray.length - 1;
           }
-          console.log(imageIndex);
+          //console.log(imageIndex);
           const imageTag = imageDivRef.current.querySelector('img');
           // console.log(imageTag);
           imageTag.src = imageArray[imageIndex];
