@@ -35,7 +35,6 @@ const projectImages = [
   }
 ]
 
-
 const Projects = () => {
 
   gsap.registerPlugin(ScrollTrigger)
@@ -60,7 +59,7 @@ const Projects = () => {
       <div className="pt-[30vh] text-black">
         <h2 className="font-[font2] text-[10vw] uppercase">Projects</h2>
       </div>
-      <div className="-mt-15 parent">
+      <div className="-mt-15 parent md:-mt-8">
         {projectImages.map(function(elem,idx){
           return <div key={idx} className="hero w-full h-[500px] mb-5 flex gap-5">
           <ProjectCard image1={elem.image1} image2={elem.image2}/>
