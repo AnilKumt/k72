@@ -42,24 +42,24 @@ const Agence = () => {
     })
   })
   return (
-    <div>
-      <div className="section1">
-        <div ref={imageDivRef}  className="overflow-hidden h-70 w-55 absolute top-60 left-136 rounded-3xl md:top-50 md:left-100 md:h-55 md:w-40">
+    <div >
+      <div className="section1 bg-red-600">
+        <div ref={imageDivRef}  className="overflow-hidden lg:h-70 lg:w-55 absolute lg:top-60 lg:left-136 rounded-3xl md:top-1 md:left-70 md:h-60 md:w-50 h-35 w-30">
           <img 
             className="h-full w-full object-cover"
             src="https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg"
           />
         </div>
         <div className="relative">
-          <div className="mt-[55vh] text-black md:mt-[40vh]">
-            <h1 className="text-[17vw] text-center uppercase leading-[15vw] md:text-[12vw]">
+          <div className="lg:mt-[55vh] text-black md:mt-[20vh] md:pt-[10vh] sm:mt-[5vh] mt-[25vh]">
+            <h1 className="lg:text-[17vw] text-center font-medium uppercase leading-[15vw] md:text-[20vw] text-[15vw]">
               SEVEN7Y
               <br />
               TWO
             </h1>
           </div>
-          <div className="pl-[38%] mt-20">
-            <p className="text-6xl text-black md:text-3xl">
+          <div className="lg:pl-[38%] lg:mt-20 md:p-2 md:mt-15">
+            <p className="lg:text-6xl text-black md:text-3xl md:font-semibold font-bold">
               We're inquisitive and open-minded, and we make sure creativity
               crowds out ego from every corner. A brand is a living thing, with
               values, a personality and a story. If we ignore that, we can

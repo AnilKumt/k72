@@ -10,7 +10,7 @@ const Navbar = () => {
   const fillcolor = location.pathname === '/'? 'white' : 'black';
 
   return (
-    <div className="flex fixed top-0 w-full items-start justify-between z-4 p-5">
+    <div className="flex fixed top-0 w-full items-start justify-between z-4 p-5 bg-fuchsia-700 md:h-28 h-18">
       <Link to="/">
         <div className="h-40 w-60">
           <svg
@@ -39,7 +39,7 @@ const Navbar = () => {
         onMouseLeave={() => {
           navGreenRef.current.style.height = "0%";
         }}
-        className="bg-black relative h-13 lg:w-60 cursor-pointer w-48"
+        className="bg-black relative h-10 lg:w-60 md:w-60 md:h-12 cursor-pointer w-40"
       >
         <div
           ref={navGreenRef}
