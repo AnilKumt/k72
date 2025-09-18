@@ -44,14 +44,14 @@ const Agence = () => {
   return (
     <div>
       <div className="section1">
-        <div ref={imageDivRef}  className="overflow-hidden h-70 w-55 absolute top-60 left-136 rounded-3xl bg-red-500">
+        <div ref={imageDivRef}  className="overflow-hidden h-70 w-55 absolute top-60 left-136 rounded-3xl">
           <img 
             className="h-full w-full object-cover"
             src="https://k72.ca/uploads/teamMembers/joel_480X640_3-480x640.jpg"
           />
         </div>
         <div className="relative">
-          <div className="mt-[55vh]">
+          <div className="mt-[55vh] text-black">
             <h1 className="text-[17vw] text-center uppercase leading-[15vw]">
               SEVEN7Y
               <br />
@@ -59,7 +59,7 @@ const Agence = () => {
             </h1>
           </div>
           <div className="pl-[38%] mt-20">
-            <p className="text-6xl">
+            <p className="text-6xl text-black">
               We’re inquisitive and open-minded, and we make sure creativity
               crowds out ego from every corner. A brand is a living thing, with
               values, a personality and a story. If we ignore that, we can

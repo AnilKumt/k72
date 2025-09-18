@@ -57,7 +57,7 @@ const Projects = () => {
 
   return (
     <div>
-      <div className="pt-[30vh]">
+      <div className="pt-[30vh] text-black">
         <h2 className="font-[font2] text-[10vw] uppercase">Projects</h2>
       </div>
       <div className="-mt-15 parent">
