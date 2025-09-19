@@ -10,7 +10,7 @@ const Navbar = () => {
   const fillcolor = location.pathname === '/'? 'white' : 'black';
 
   return (
-    <div className="flex fixed top-0 w-full items-start justify-between z-4 p-5 bg-fuchsia-700 md:h-28 h-18">
+    <div className="flex fixed top-0 w-full items-start justify-between z-4 p-5 md:h-28 h-18">
       <Link to="/">
         <div className="h-40 w-60">
           <svg
